@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specchio Interattivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mirror-container">
+        <!-- Schermata 1: Blocco -->
+        <div class="screen screen-block" id="screen-block">
+            <!-- Icona checklist sopra il lucchetto -->
+            <div class="icon-checklist" onclick="toggleEvents()">✅</div> <!-- Icona Checklist -->
+            <div class="icon-lock" onclick="toggleLock()">🔒</div> <!-- Icona Lucchetto -->
+        </div>
+
+        <!-- Schermata 2: Specchio Semplice -->
+        <div class="screen screen-mirror" id="screen-mirror">
+        </div>
+
+        <!-- Schermata 3: Dashboard Giorno -->
+        <div class="screen screen-dashboard" id="screen-dashboard">
+            <div class="icon weather" onclick="toggleWeatherActivity()">🌤️</div>
+        </div>
+
+        <!-- Schermata 4: Avatar per Bambini -->
+        <div class="screen screen-avatar" id="screen-avatar" style="display: none;">
+            <div class="avatar" onclick="toggleActivity()">👶</div>
+        </div>
+
+        <div class="text" id="welcome-text" style="display: none;">Benvenuto nel tuo specchio!</div>
+
+        <!-- Orario in tempo reale in alto a destra -->
+        <div class="time" id="time"></div>
+
+        <!-- Icona IA in basso a destra (nascosta per default) -->
+        <div class="icon ai" id="ai-icon" onclick="toggleAiActivity()">🟢</div>
+
+        <!-- Testo meteo al centro -->
+        <div id="weather-text" style="display: none;">Meteo: Parzialmente nuvoloso, 20°C</div>
+
+        <!-- Lista Eventi (nascosta di default) -->
+        <div id="events-list" style="display: none;">
+            <ul>
+                <li>Traffico</li>
+                <li>Riunione Team</li>
+                <li>Allenamento</li>
+            </ul>
+        </div>
+
+        <!-- Scritta "lavarsi i denti" -->
+        <div id="activity-text" style="display: none;">È ora di lavarsi i denti!</div>
+        <div id="ai-activity-text" style="display: none;">Interazione con IA</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
